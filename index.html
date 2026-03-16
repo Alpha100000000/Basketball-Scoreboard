@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basketball Scoreboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- WINNER OVERLAY -->
+  <div id="winnerOverlay" class="overlay hidden">
+    <div class="winner-card">
+      <div class="winner-title" id="winnerTitle">HOME WINS</div>
+      <div class="winner-score" id="winnerScore">Home 0 - 0 Away</div>
+
+      <div class="winner-buttons">
+        <button id="newGameBtn" class="overlay-btn primary">New Game</button>
+        <button id="closeOverlayBtn" class="overlay-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="scoreboard">
+    <h1>🏀 Basketball Scoreboard</h1>
+
+    <div class="teams">
+      <!-- AWAY -->
+      <div class="team">
+        <h2>Away</h2>
+        <div id="awayScore" class="score">0</div>
+
+        <div class="btn-row">
+          <button class="add-btn" data-team="away" data-points="1">+1</button>
+          <button class="add-btn" data-team="away" data-points="2">+2</button>
+          <button class="add-btn" data-team="away" data-points="3">+3</button>
+        </div>
+      </div>
+
+      <!-- HOME -->
+      <div class="team">
+        <h2>Home</h2>
+        <div id="homeScore" class="score">0</div>
+
+        <div class="btn-row">
+          <button class="add-btn" data-team="home" data-points="1">+1</button>
+          <button class="add-btn" data-team="home" data-points="2">+2</button>
+          <button class="add-btn" data-team="home" data-points="3">+3</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+      <!-- Period -->
+      <div class="info-box">
+        <div class="label">PERIOD</div>
+        <div id="periodNumber" class="value">1</div>
+        <button id="nextPeriodBtn" class="small-btn">Next</button>
+      </div>
+
+      <!-- Game Clock -->
+      <div class="info-box">
+        <div class="label">GAME CLOCK</div>
+        <div id="clock" class="value">12:00</div>
+
+        <div class="clock-controls">
+          <button id="startBtn" class="small-btn">Start</button>
+          <button id="pauseBtn" class="small-btn">Pause</button>
+          <button id="resetClockBtn" class="small-btn">Reset</button>
+        </div>
+      </div>
+
+      <!-- Shot Clock -->
+      <div class="info-box">
+        <div class="label">SHOT CLOCK</div>
+        <div id="shotClock" class="value">24</div>
+
+        <div class="clock-controls">
+          <button id="shotStartBtn" class="small-btn">Start</button>
+          <button id="shotPauseBtn" class="small-btn">Pause</button>
+          <button id="shotReset24Btn" class="small-btn">24</button>
+          <button id="shotReset14Btn" class="small-btn">14</button>
+        </div>
+      </div>
+    </div>
+
+    <button id="resetGameBtn" class="reset">Reset Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

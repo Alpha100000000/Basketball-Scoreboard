@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  background: #070707;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #f5d36b;
+}
+
+.scoreboard {
+  background: #000;
+  width: min(1050px, 94vw);
+  padding: 32px;
+  border-radius: 18px;
+  text-align: center;
+  border: 3px solid #f5d36b;
+  box-shadow: 0 0 28px rgba(245, 211, 107, 0.35);
+}
+
+.scoreboard h1 {
+  margin: 0 0 24px;
+  letter-spacing: 1px;
+  color: #f5d36b;
+}
+
+.teams {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.team {
+  flex: 1;
+  background: #0c0c0c;
+  border: 2px solid rgba(245, 211, 107, 0.35);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.team h2 {
+  margin: 0 0 12px;
+  color: #f5d36b;
+  letter-spacing: 1px;
+}
+
+.score {
+  font-size: 86px;
+  font-weight: 900;
+  color: #f5d36b;
+  background: #141414;
+  padding: 18px 10px;
+  border-radius: 12px;
+  border: 3px solid #f5d36b;
+  margin-bottom: 14px;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.add-btn {
+  background: #f5d36b;
+  color: #000;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.add-btn:active {
+  transform: scale(0.98);
+}
+
+.info {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.info-box {
+  background: #0c0c0c;
+  border: 2px solid rgba(245, 211, 107, 0.35);
+  border-radius: 14px;
+  padding: 16px;
+  width: 270px;
+}
+
+.label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+  color: #f5d36b;
+}
+
+.value {
+  font-size: 44px;
+  font-weight: 900;
+  color: #f5d36b;
+  background: #141414;
+  border: 2px solid #f5d36b;
+  border-radius: 12px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.clock-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.small-btn {
+  background: transparent;
+  color: #f5d36b;
+  border: 2px solid #f5d36b;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.small-btn:active {
+  transform: scale(0.98);
+}
+
+.reset {
+  background: #f5d36b;
+  color: #000;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* ===== WINNER OVERLAY ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}
+
+.winner-card {
+  width: min(520px, 92vw);
+  background: #0c0c0c;
+  border: 3px solid #f5d36b;
+  border-radius: 18px;
+  box-shadow: 0 0 34px rgba(245, 211, 107, 0.35);
+  padding: 24px;
+  text-align: center;
+}
+
+.winner-title {
+  font-size: 42px;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.winner-score {
+  font-size: 20px;
+  opacity: 0.95;
+  margin-bottom: 18px;
+}
+
+.winner-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.overlay-btn {
+  background: transparent;
+  color: #f5d36b;
+  border: 2px solid #f5d36b;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.overlay-btn.primary {
+  background: #f5d36b;
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .teams {
+    flex-direction: column;
+  }
+}
